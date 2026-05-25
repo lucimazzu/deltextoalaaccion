@@ -12,15 +12,11 @@
     --naranja: #F97316;
     --naranja-oscuro: #C2410C;
     --naranja-light: #FFF1E6;
-    --verde: #1D9E75;
-    --verde-oscuro: #0F6E56;
-    --verde-deep: #04342C;
-    --verde-light: #D1FAE5;
     --violeta: #7F77DD;
     --violeta-oscuro: #534AB7;
     --violeta-deep: #26215C;
     --violeta-light: #EDE9FE;
-    --negro: #0D0D0D;
+    --negro: #0A0A0A;
     --negro-soft: #1A1A1A;
     --crema: #F5F0E8;
     --crema-dark: #EDE7DA;
@@ -33,13 +29,14 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--negro);
+    background: linear-gradient(135deg, var(--negro) 0%, #0E0E12 50%, var(--negro) 100%);
     color: var(--crema);
     font-family: var(--sans);
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    min-height: 100vh;
   }
 
   /* ── TEXTURA DE FONDO ── */
@@ -49,8 +46,7 @@
     inset: 0;
     background-image:
       radial-gradient(ellipse 80% 60% at 10% 20%, rgba(249,115,22,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 80% at 90% 80%, rgba(127,119,221,0.07) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(29,158,117,0.04) 0%, transparent 70%);
+      radial-gradient(ellipse 60% 80% at 90% 80%, rgba(127,119,221,0.06) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
   }
@@ -58,7 +54,7 @@
   /* ── NAV ── */
   nav {
     position: sticky; top: 0; z-index: 200;
-    background: rgba(13,13,13,0.92);
+    background: rgba(10,10,10,0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(249,115,22,0.15);
@@ -100,6 +96,7 @@
     padding: 7rem 0 6rem;
     border-bottom: 1px solid rgba(249,115,22,0.12);
     position: relative; overflow: hidden;
+    z-index: 1;
   }
   .hero::after {
     content: 'ACT';
@@ -120,13 +117,13 @@
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--verde);
+    color: var(--violeta);
     margin-bottom: 2rem;
   }
   .hero-eyebrow::before {
     content: '';
     display: block; width: 28px; height: 1px;
-    background: var(--verde);
+    background: var(--violeta);
   }
   .hero h1 {
     font-family: var(--serif);
@@ -241,7 +238,7 @@
     padding: 2rem;
     transition: background 0.2s;
   }
-  .feature:hover { background: rgba(29,158,117,0.06); }
+  .feature:hover { background: rgba(127,119,221,0.06); }
   .feature-icon {
     width: 36px; height: 36px;
     border-radius: 50%;
@@ -253,7 +250,7 @@
     font-family: var(--sans);
     font-size: 13px; font-weight: 700;
     letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--verde);
+    color: var(--violeta);
     margin-bottom: 0.5rem;
   }
   .feature p {
@@ -286,7 +283,7 @@
   .plan-tag {
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--naranja);
     margin-bottom: 1.25rem; display: block;
   }
   .plan.featured .plan-tag { color: rgba(13,13,13,0.6); }
@@ -331,7 +328,7 @@
   .plan-list li::before {
     content: '→';
     position: absolute; left: 0;
-    color: var(--verde); font-size: 11px;
+    color: var(--naranja); font-size: 11px;
   }
   .plan.featured .plan-list li { color: rgba(13,13,13,0.65); border-bottom-color: rgba(13,13,13,0.1); }
   .plan.featured .plan-list li::before { color: var(--negro); }
@@ -482,12 +479,12 @@
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--verde);
+    color: var(--violeta);
     margin-bottom: 1.5rem;
   }
   .cierre-eyebrow::before, .cierre-eyebrow::after {
     content: ''; display: block;
-    width: 24px; height: 1px; background: var(--verde);
+    width: 24px; height: 1px; background: var(--violeta);
   }
   .cierre h2 {
     font-family: var(--serif);
@@ -610,18 +607,18 @@
           <div class="stat-label">encuentros por mes</div>
         </div>
         <div class="stat">
-          <div class="stat-number" style="color:var(--verde);">3hs</div>
+          <div class="stat-number" style="color:var(--violeta);">3hs</div>
           <div class="stat-label">cada encuentro</div>
         </div>
         <div class="stat">
-          <div class="stat-number" style="color:var(--violeta);">10</div>
+          <div class="stat-number" style="color:var(--naranja);">10</div>
           <div class="stat-label">cupos máximos</div>
         </div>
       </div>
 
       <div class="features-grid" style="margin-top:12px;">
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(29,158,117,0.12);">🎭</div>
+          <div class="feature-icon" style="background:rgba(127,119,221,0.12);">🎭</div>
           <h4>Monólogos y escenas</h4>
           <p>Textos teatrales, cinematográficos o de autoría propia como material de trabajo.</p>
         </div>
@@ -636,7 +633,7 @@
           <p>La docente selecciona y provee el material según el proceso de cada participante.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(29,158,117,0.12);">🏛️</div>
+          <div class="feature-icon" style="background:rgba(249,115,22,0.12);">🏛️</div>
           <h4>Función final en sala</h4>
           <p>El proceso cierra con una presentación real en sala, no solo una muestra interna.</p>
         </div>
@@ -672,7 +669,7 @@
         <div class="plan">
           <span class="plan-tag">Digital</span>
           <h3>Módulo introductorio</h3>
-          <div class="plan-price" style="font-size:20px; color:var(--verde);">Próximamente</div>
+          <div class="plan-price" style="font-size:20px; color:var(--violeta);">Próximamente</div>
           <p class="plan-sub">Acceso online · A tu ritmo</p>
           <p class="plan-desc">Para quienes quieren empezar a entender el método antes de entrar al laboratorio.</p>
           <ul class="plan-list">
@@ -686,7 +683,7 @@
         <div class="plan">
           <span class="plan-tag">Individual</span>
           <h3>Coaching actoral</h3>
-          <div class="plan-price" style="font-size:20px; color:var(--violeta);">Por entrevista</div>
+          <div class="plan-price" style="font-size:20px; color:var(--naranja);">Por entrevista</div>
           <p class="plan-sub">Atención personalizada</p>
           <p class="plan-desc">Para trabajar bloqueos específicos, preparar castings o pulir un unipersonal.</p>
           <ul class="plan-list">
