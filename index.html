@@ -18,8 +18,9 @@
     --violeta-light: #EDE9FE;
     --negro: #0A0A0A;
     --negro-soft: #1A1A1A;
-    --crema: #F5F0E8;
-    --crema-dark: #EDE7DA;
+    --blanco: #FFFFFF;
+    --verde: #1D9E75;
+    --verde-light: #D1FAE5;
     --gris: #6B6660;
     --gris-light: #C8C3BC;
     --serif: 'Playfair Display', Georgia, serif;
@@ -30,7 +31,7 @@
 
   body {
     background: linear-gradient(135deg, var(--negro) 0%, #0E0E12 50%, var(--negro) 100%);
-    color: var(--crema);
+    color: var(--blanco);
     font-family: var(--sans);
     font-size: 16px;
     line-height: 1.7;
@@ -67,7 +68,7 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--crema);
+    color: var(--blanco);
     text-decoration: none;
   }
   .nav-logo span { color: var(--naranja); }
@@ -117,20 +118,20 @@
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--verde);
     margin-bottom: 2rem;
   }
   .hero-eyebrow::before {
     content: '';
     display: block; width: 28px; height: 1px;
-    background: var(--violeta);
+    background: var(--verde);
   }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(46px, 8vw, 76px);
     font-weight: 400;
     line-height: 1.06;
-    color: var(--crema);
+    color: var(--blanco);
     margin-bottom: 2rem;
     letter-spacing: -0.02em;
   }
@@ -141,10 +142,11 @@
   .hero-sub {
     font-size: 16px;
     font-weight: 400;
-    color: rgba(245,240,232,0.65);
+    color: var(--blanco);
     max-width: 540px;
     line-height: 1.8;
     margin-bottom: 3rem;
+    opacity: 0.9;
   }
   .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
   .btn-main {
@@ -168,14 +170,15 @@
   .btn-main:hover::after { opacity: 1; }
   .btn-ghost {
     font-size: 13px; font-weight: 500;
-    color: rgba(245,240,232,0.5);
+    color: var(--blanco);
     text-decoration: none;
     letter-spacing: 0.03em;
-    border-bottom: 1px solid rgba(245,240,232,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
     padding-bottom: 2px;
     transition: all 0.2s;
+    opacity: 0.7;
   }
-  .btn-ghost:hover { color: var(--crema); border-bottom-color: var(--crema); }
+  .btn-ghost:hover { color: var(--blanco); border-bottom-color: var(--blanco); opacity: 1; }
 
   /* ── SECTIONS ── */
   .section { padding: 5rem 0; border-bottom: 1px solid rgba(245,240,232,0.06); position: relative; z-index: 1; }
@@ -183,28 +186,29 @@
     display: inline-flex; align-items: center; gap: 8px;
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--verde);
     margin-bottom: 1.75rem;
   }
   .section-label::before {
     content: '';
     display: block; width: 18px; height: 1px;
-    background: var(--violeta);
+    background: var(--verde);
   }
   .section h2 {
     font-family: var(--serif);
     font-size: clamp(28px, 4.5vw, 42px);
     font-weight: 400;
     line-height: 1.18;
-    color: var(--crema);
+    color: var(--blanco);
     margin-bottom: 1.75rem;
     letter-spacing: -0.01em;
   }
   .section p {
     font-size: 15px; font-weight: 400;
-    color: rgba(245,240,232,0.6);
+    color: var(--blanco);
     line-height: 1.85; margin-bottom: 1.1rem;
     max-width: 640px;
+    opacity: 0.85;
   }
   .section p:last-child { margin-bottom: 0; }
 
@@ -220,7 +224,7 @@
     font-family: var(--serif);
     font-size: clamp(19px, 2.5vw, 24px);
     font-style: italic; font-weight: 400;
-    color: var(--crema) !important;
+    color: var(--naranja) !important;
     line-height: 1.55; max-width: 580px; margin: 0 !important;
   }
 
@@ -239,25 +243,19 @@
     transition: background 0.2s;
   }
   .feature:hover { background: rgba(127,119,221,0.06); }
-  .feature-icon {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    margin-bottom: 1rem;
-  }
   .feature h4 {
     font-family: var(--sans);
     font-size: 13px; font-weight: 700;
     letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--verde);
     margin-bottom: 0.5rem;
   }
   .feature p {
     font-size: 13px !important;
-    color: rgba(245,240,232,0.5) !important;
+    color: var(--blanco) !important;
     line-height: 1.65 !important;
     margin: 0 !important; max-width: none !important;
+    opacity: 0.8 !important;
   }
 
   /* ── PLANES ── */
@@ -290,7 +288,7 @@
   .plan h3 {
     font-family: var(--serif);
     font-size: 22px; font-weight: 400;
-    color: var(--crema); margin-bottom: 0.5rem;
+    color: var(--blanco); margin-bottom: 0.5rem;
   }
   .plan.featured h3 { color: var(--negro); }
   .plan-price {
@@ -302,35 +300,39 @@
   .plan-price span {
     font-family: var(--sans);
     font-size: 13px; font-weight: 400;
-    color: rgba(245,240,232,0.4);
+    color: var(--blanco);
+    opacity: 0.6;
   }
   .plan.featured .plan-price span { color: rgba(13,13,13,0.5); }
   .plan-sub {
-    font-size: 12px; color: rgba(245,240,232,0.4);
+    font-size: 12px; color: var(--blanco);
     margin-bottom: 1.25rem; line-height: 1.5;
+    opacity: 0.7;
   }
   .plan.featured .plan-sub { color: rgba(13,13,13,0.55); }
   .plan-desc {
-    font-size: 13px; color: rgba(245,240,232,0.55);
+    font-size: 13px; color: var(--blanco);
     line-height: 1.65; margin-bottom: 1.25rem; flex-grow: 1;
+    opacity: 0.8;
   }
   .plan.featured .plan-desc { color: rgba(13,13,13,0.65); }
   .plan-list {
     list-style: none; margin-bottom: 1.75rem; flex-grow: 1;
   }
   .plan-list li {
-    font-size: 13px; color: rgba(245,240,232,0.5);
+    font-size: 13px; color: var(--blanco);
     padding: 0.4rem 0;
     border-bottom: 1px solid rgba(245,240,232,0.05);
     padding-left: 1.2rem; position: relative;
     line-height: 1.5;
+    opacity: 0.8;
   }
   .plan-list li::before {
     content: '→';
     position: absolute; left: 0;
     color: var(--naranja); font-size: 11px;
   }
-  .plan.featured .plan-list li { color: rgba(13,13,13,0.65); border-bottom-color: rgba(13,13,13,0.1); }
+  .plan.featured .plan-list li { color: var(--negro); border-bottom-color: rgba(13,13,13,0.1); opacity: 1; }
   .plan.featured .plan-list li::before { color: var(--negro); }
   .plan-cta {
     display: block; text-align: center;
@@ -343,18 +345,18 @@
   }
   .plan-cta-inverse {
     background: var(--negro);
-    color: var(--crema);
+    color: var(--blanco);
     border: 1px solid var(--negro);
   }
   .plan-cta-inverse:hover { background: var(--negro-soft); }
   .plan-cta-outline {
     background: transparent;
-    color: rgba(245,240,232,0.6);
-    border: 1px solid rgba(245,240,232,0.15);
+    color: var(--blanco);
+    border: 1px solid rgba(255,255,255,0.2);
   }
   .plan-cta-outline:hover {
-    color: var(--crema);
-    border-color: rgba(245,240,232,0.4);
+    color: var(--blanco);
+    border-color: rgba(255,255,255,0.5);
   }
 
   /* ── TESTIMONIOS ── */
@@ -377,13 +379,13 @@
     position: absolute; top: 1.2rem; left: 1.5rem;
     font-family: var(--serif);
     font-size: 48px; font-style: italic;
-    color: var(--violeta);
+    color: var(--verde);
     opacity: 0.35; line-height: 1;
   }
   .testimonio p {
     font-family: var(--serif);
     font-size: 17px; font-style: italic;
-    color: rgba(245,240,232,0.8) !important;
+    color: var(--verde) !important;
     line-height: 1.65; margin-bottom: 0.75rem !important;
     max-width: none !important;
     padding-left: 1.5rem;
@@ -392,7 +394,7 @@
     font-family: var(--sans);
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--naranja);
     font-style: normal;
     padding-left: 1.5rem;
     display: block;
@@ -423,9 +425,10 @@
   }
   .bio-text p {
     font-size: 14px;
-    color: rgba(245,240,232,0.55);
+    color: var(--blanco);
     line-height: 1.85; margin-bottom: 0.85rem;
     max-width: none !important;
+    opacity: 0.8;
   }
   .bio-text p:last-child { margin-bottom: 0; }
   .bio-link {
@@ -455,11 +458,13 @@
     font-family: var(--serif);
     font-size: 48px; font-weight: 700;
     line-height: 1; margin-bottom: 0.5rem;
+    color: var(--blanco);
   }
   .stat-label {
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(245,240,232,0.4);
+    color: var(--blanco);
+    opacity: 0.6;
   }
 
   /* ── CIERRE ── */
@@ -479,35 +484,37 @@
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--violeta);
+    color: var(--verde);
     margin-bottom: 1.5rem;
   }
   .cierre-eyebrow::before, .cierre-eyebrow::after {
     content: ''; display: block;
-    width: 24px; height: 1px; background: var(--violeta);
+    width: 24px; height: 1px; background: var(--verde);
   }
   .cierre h2 {
     font-family: var(--serif);
     font-size: clamp(32px, 5.5vw, 54px);
     font-weight: 400; line-height: 1.15;
-    color: var(--crema); margin-bottom: 1.25rem;
+    color: var(--blanco); margin-bottom: 1.25rem;
     letter-spacing: -0.015em;
   }
   .cierre h2 em { font-style: italic; color: var(--naranja); }
   .cierre p {
-    font-size: 15px; color: rgba(245,240,232,0.45);
+    font-size: 15px; color: var(--blanco);
     margin-bottom: 2.5rem;
+    opacity: 0.8;
   }
   .cierre-note {
     margin-top: 1.5rem;
-    font-size: 13px; color: rgba(245,240,232,0.35);
+    font-size: 13px; color: var(--blanco);
+    opacity: 0.6;
   }
   .cierre-note a {
-    color: var(--violeta); text-decoration: none;
-    border-bottom: 1px solid rgba(127,119,221,0.35);
+    color: var(--verde); text-decoration: none;
+    border-bottom: 1px solid rgba(29,158,117,0.35);
     padding-bottom: 1px; transition: all 0.2s;
   }
-  .cierre-note a:hover { color: var(--crema); border-bottom-color: var(--crema); }
+  .cierre-note a:hover { color: var(--blanco); border-bottom-color: var(--blanco); }
 
   /* ── FOOTER ── */
   footer {
@@ -519,7 +526,8 @@
   footer p {
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(245,240,232,0.25);
+    color: var(--blanco);
+    opacity: 0.4;
   }
   footer a {
     font-size: 11px; font-weight: 700;
@@ -527,7 +535,7 @@
     color: var(--naranja); text-decoration: none;
     transition: color 0.2s;
   }
-  footer a:hover { color: var(--crema); }
+  footer a:hover { color: var(--blanco); }
 
   /* ── ANIMACIONES DE ENTRADA ── */
   @keyframes fadeUp {
@@ -607,7 +615,7 @@
           <div class="stat-label">encuentros por mes</div>
         </div>
         <div class="stat">
-          <div class="stat-number" style="color:var(--violeta);">3hs</div>
+          <div class="stat-number" style="color:var(--verde);">3hs</div>
           <div class="stat-label">cada encuentro</div>
         </div>
         <div class="stat">
@@ -618,28 +626,24 @@
 
       <div class="features-grid" style="margin-top:12px;">
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(127,119,221,0.12);">🎭</div>
           <h4>Monólogos y escenas</h4>
           <p>Textos teatrales, cinematográficos o de autoría propia como material de trabajo.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(249,115,22,0.12);">⚡</div>
           <h4>Corrección en vivo</h4>
           <p>Devolución precisa y aplicable en el momento, no al final del proceso.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(127,119,221,0.12);">📝</div>
           <h4>Textos provistos</h4>
           <p>La docente selecciona y provee el material según el proceso de cada participante.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon" style="background:rgba(249,115,22,0.12);">🏛️</div>
           <h4>Función final en sala</h4>
           <p>El proceso cierra con una presentación real en sala, no solo una muestra interna.</p>
         </div>
       </div>
 
-      <p style="font-size:12px; color:rgba(245,240,232,0.3); margin-top:1.25rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">CABA · Zona Almagro</p>
+      <p style="font-size:12px; color:var(--blanco); margin-top:1.25rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; opacity:0.6;">CABA · Zona Almagro</p>
     </div>
   </section>
 
@@ -669,7 +673,7 @@
         <div class="plan">
           <span class="plan-tag">Digital</span>
           <h3>Módulo introductorio</h3>
-          <div class="plan-price" style="font-size:20px; color:var(--violeta);">Próximamente</div>
+          <div class="plan-price" style="font-size:20px; color:var(--verde);">Próximamente</div>
           <p class="plan-sub">Acceso online · A tu ritmo</p>
           <p class="plan-desc">Para quienes quieren empezar a entender el método antes de entrar al laboratorio.</p>
           <ul class="plan-list">
